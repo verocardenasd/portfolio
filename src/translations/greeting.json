@@ -1,0 +1,20 @@
+{
+  "de": {
+    "greeting": "Hi, ich bin",
+    "text1": "Ich bin eine leidenschaftliche Frontend-Entwicklerin mit einem Hintergrund in Chemieingenieurwesen und über 7 Jahren kombinierter Erfahrung in Technik, Engineering und kreativer digitaler Arbeit.",
+    "text2": "Meine Reise in die Webentwicklung begann während meines Studiums, als ich in einem Start-up arbeitete und mich in die Idee verliebte, Konzepte in funktionale, schöne Webseiten zu verwandeln.",
+    "text3": "Ich spezialisiere mich auf den Bau responsiver und benutzerfreundlicher Interfaces mit React und TypeScript. Für mich fühlt sich das Coden an wie ein Tanz mit Logik – ich mache meine Musik an, öffne meinen Editor und lasse Designs lebendig werden.",
+    "text4": "Ich bin detailorientiert, selbstständig und liebe es, gut zu planen, bevor ich mit dem Coden beginne. Neben der Entwicklung interessiere ich mich stark für Social Media, digitales Marketing und UI/UX – besonders in den Bereichen Gesundheit, Fitness und Lifestyle.",
+    "text5": "Abseits vom Code bin ich CrossFit-Athletin und Content Creatorin. Seit über einem Jahr entwickle ich meine eigenen Trainingspläne – ein Spiegelbild meiner Arbeitsweise: diszipliniert, neugierig und mit Freude am Prozess.",
+    "text6": "Lass uns gemeinsam etwas Sinnvolles gestalten!"
+  },
+  "en": {
+    "greeting": "Hi, I'm",
+    "text1": "I'm a passionate Frontend Developer with a background in Chemical Engineering and over 7 years of combined experience in tech, engineering, and creative digital work.",
+    "text2": " My journey with web development started during university, when I joined a startup and fell in love with turning ideas into functional, beautiful websites.",
+    "text3": "I specialize in building responsive and user-friendly interfaces using React and TypeScript. For me, writing code is like dancing with logic, I put on my music, open my editor, and bring designs to life.",
+    "text4": "I'm detail-oriented, self-driven, and love planning before jumping into code. Beyond development, I have a strong interest in social media, digital marketing, and UI/UX, especially when it involves health, fitness, or lifestyle products.",
+    "text5": "Outside of coding, I'm a CrossFit athlete and content creator. I've been designing my own training programs for over a year, a reflection of how I approach everything in life: with discipline, curiosity, and joy.",
+    "text6": "Let's build something meaningful together!"
+  }
+}
