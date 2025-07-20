@@ -31,20 +31,6 @@ const mainContainerVariants: Variants = {
   },
 };
 
-// Variants for each individual circle's initial appearance
-const circleEnterVariants: Variants = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      type: "spring",
-      stiffness: 100,
-      damping: 15,
-    },
-  },
-};
-
 // Variants for the icon animation on hover
 const iconVariants: Variants = {
   rest: { rotate: 0 }, // Ruhezustand: keine Rotation
@@ -120,7 +106,7 @@ function Hobbies() {
           initial="hidden"
           animate="visible"
         >
-          {hobbiesData.map((hobby, index) => (
+          {hobbiesData.map((hobby) => (
             <motion.div
               style={box}
               whileHover={{
