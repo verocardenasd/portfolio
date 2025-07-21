@@ -107,7 +107,7 @@ function SocialMedia() {
 
       {/* Github */}
       <MotionLink
-        href="https://www.github.com/your_github_id"
+        href="https://www.github.com/verocardenasd"
         target="_blank"
         initial={{ scale: 1 }}
         whileHover={{ scale: 1.2 }}

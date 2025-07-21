@@ -60,7 +60,7 @@ function GitHubRepos() {
       try {
         setLoading(true);
         const response = await fetch(
-          "https://api.github.com/users/Jonas-dev1812/repos"
+          "https://api.github.com/users/verocardenasd/repos"
         );
         if (!response.ok) {
           throw new Error(`GitHub API Fehler: ${response.statusText}`);
