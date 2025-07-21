@@ -18,7 +18,6 @@ import { MdCheckCircle } from "react-icons/md";
 import { useColorModeValue } from "../ui/color-mode";
 import { useLanguage } from "../../contexts/LanguageContext";
 import professionalexperienceContent from "../../translations/professionalexperience.json";
-import { desc } from "framer-motion/client";
 
 const MotionLink = motion(Link);
 
