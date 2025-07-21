@@ -16,10 +16,15 @@ import {
 import { motion } from "framer-motion";
 import { MdCheckCircle } from "react-icons/md";
 import { useColorModeValue } from "../ui/color-mode";
+import { useLanguage } from "../../contexts/LanguageContext";
+import professionalexperienceContent from "../../translations/professionalexperience.json";
+import { desc } from "framer-motion/client";
 
 const MotionLink = motion(Link);
 
 function ProfessionalExperience() {
+  const { language } = useLanguage();
+  const content = professionalexperienceContent[language];
   const cardBg = useColorModeValue("white", "gray.700");
   const headingColor = useColorModeValue("teal.700", "teal.300");
   const boldTextColor = useColorModeValue("gray.800", "gray.200");
@@ -32,7 +37,7 @@ function ProfessionalExperience() {
       {" "}
       <CardHeader pb={0} marginBottom={6}>
         <Heading as="h2" size="2xl" color={headingColor}>
-          Professional Experience
+          {content.title}
         </Heading>
       </CardHeader>
       <CardBody pt={2}>
@@ -59,24 +64,35 @@ function ProfessionalExperience() {
               </HStack>
             </MotionLink>
             <Text fontSize="sm" color={normalTextColor}>
-              Fulltime · 3 Years 7 Month
+              {content.timeRTM}
             </Text>
             <Text fontSize="sm" color={normalTextColor}>
-              Germany
+              {content.countryRTM}
             </Text>
             <Text fontWeight="bold" color={boldTextColor} mt={2} marginLeft={4}>
-              Planing Engineer
+              {content.titleRTM}
             </Text>
             <Text fontSize="sm" color={normalTextColor} marginLeft={4}>
-              Sept. 2024–Today · 11 Month
+              {content.dateRTM}
             </Text>
 
             <Text fontWeight="bold" color={boldTextColor} mt={2} marginLeft={4}>
-              Junior Engineering
+              {content.titleRTM2}
             </Text>
             <Text fontSize="sm" color={normalTextColor} marginLeft={4}>
-              Jan. 2022–Aug. 2024 · 2 Years 8 Month
+              {content.dateRTM2}
             </Text>
+            <List.Root gap={0} mt={1}>
+              {" "}
+              <ListItem color={listItemColor}>
+                <Icon as={MdCheckCircle} color={checkIconColor} />{" "}
+                {content.descriptionRTM1}
+              </ListItem>
+              <ListItem color={listItemColor}>
+                <Icon as={MdCheckCircle} color={checkIconColor} />{" "}
+                {content.descriptionRTM2}
+              </ListItem>
+            </List.Root>
           </Box>
 
           {/* Cognizant - Content Moderator */}
@@ -96,19 +112,30 @@ function ProfessionalExperience() {
                   borderRadius="md"
                 />
                 <Text fontWeight="bold" color={boldTextColor}>
-                  Content Moderator
+                  {content.titleCognizant}
                 </Text>
               </HStack>
             </MotionLink>
             <Text fontSize="sm" color={normalTextColor}>
-              Cognizant · Full time
+              {content.timeCognizant}
             </Text>
             <Text fontSize="sm" color={normalTextColor}>
-              Sept. 2020–Jan. 2022 · 1 Year 5 Month
+              {content.dateCognizant}
             </Text>
             <Text fontSize="sm" color={normalTextColor}>
-              Budapest, Hungary
+              {content.countryHU}
             </Text>
+            <List.Root gap={0} mt={1}>
+              {" "}
+              <ListItem color={listItemColor}>
+                <Icon as={MdCheckCircle} color={checkIconColor} />{" "}
+                {content.descriptionCognizant1}
+              </ListItem>
+              <ListItem color={listItemColor}>
+                <Icon as={MdCheckCircle} color={checkIconColor} />{" "}
+                {content.descriptionCognizant2}
+              </ListItem>
+            </List.Root>
           </Box>
 
           {/* Total - Planning and Economic Analyst */}
@@ -128,24 +155,28 @@ function ProfessionalExperience() {
                   borderRadius="md"
                 />
                 <Text fontWeight="bold" color={boldTextColor}>
-                  Planning and Economic Analyst
+                  {content.titleTotal}
                 </Text>
               </HStack>
             </MotionLink>
             <Text fontSize="sm" color={normalTextColor}>
-              Total · Internship
+              {content.timeTotal}
             </Text>
             <Text fontSize="sm" color={normalTextColor}>
-              March 2019–Oct. 2019 · 8 Month
+              {content.dateTotal}
             </Text>
             <Text fontSize="sm" color={normalTextColor}>
-              Caracas, Distrikt Capital, Venezuela
+              {content.countryVE}
             </Text>
             <List.Root gap={0} mt={1}>
               {" "}
               <ListItem color={listItemColor}>
-                <Icon as={MdCheckCircle} color={checkIconColor} />
-                Planning and Economics Analysis.
+                <Icon as={MdCheckCircle} color={checkIconColor} />{" "}
+                {content.descriptionTotal1}
+              </ListItem>
+              <ListItem color={listItemColor}>
+                <Icon as={MdCheckCircle} color={checkIconColor} />{" "}
+                {content.descriptionTotal2}
               </ListItem>
             </List.Root>
           </Box>
@@ -167,28 +198,28 @@ function ProfessionalExperience() {
                   borderRadius="md"
                 />
                 <Text fontWeight="bold" color={boldTextColor}>
-                  Software Developer
+                  {content.titleAS}
                 </Text>
               </HStack>
             </MotionLink>
             <Text fontSize="sm" color={normalTextColor}>
-              Aurora Studio · Part time
+              {content.timeAS}
             </Text>
             <Text fontSize="sm" color={normalTextColor}>
-              Oct. 2018–March 2019 · 6 Month
+              {content.dateAS}
             </Text>
             <Text fontSize="sm" color={normalTextColor}>
-              Caracas, Distrikt Capital, Venezuela
+              {content.countryVE}
             </Text>
             <List.Root gap={0} mt={1}>
               {" "}
               <ListItem color={listItemColor}>
-                <Icon as={MdCheckCircle} color={checkIconColor} />
-                Web pages front-end development.
+                <Icon as={MdCheckCircle} color={checkIconColor} />{" "}
+                {content.descriptionAS1}
               </ListItem>
               <ListItem color={listItemColor}>
-                <Icon as={MdCheckCircle} color={checkIconColor} />
-                Web Development and JavaScript, HTML and CSS.
+                <Icon as={MdCheckCircle} color={checkIconColor} />{" "}
+                {content.descriptionAS2}
               </ListItem>
             </List.Root>
           </Box>
@@ -210,26 +241,24 @@ function ProfessionalExperience() {
                   borderRadius="md"
                 />
                 <Text fontWeight="bold" color={boldTextColor}>
-                  Project Development Engineer
+                  {content.titleLab}
                 </Text>
               </HStack>
             </MotionLink>
             <Text fontSize="sm" color={normalTextColor}>
-              Inmuno XXI Laboratory · Internship
+              {content.timeLab}
             </Text>
             <Text fontSize="sm" color={normalTextColor}>
-              Jan. 2018–Oct. 2018 · 10 Month
+              {content.dateLab}
             </Text>
             <Text fontSize="sm" color={normalTextColor}>
-              Caracas, Distrikt Capital, Venezuela
+              {content.countryVE}
             </Text>
             <List.Root gap={0} mt={1}>
               {" "}
               <ListItem color={listItemColor}>
-                <Icon as={MdCheckCircle} color={checkIconColor} />
-                Development of optimization projects in the customer service
-                process, sample analysis process and delivery of results
-                process.
+                <Icon as={MdCheckCircle} color={checkIconColor} />{" "}
+                {content.descriptionLab1}
               </ListItem>
             </List.Root>
           </Box>

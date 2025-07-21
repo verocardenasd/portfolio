@@ -12,10 +12,14 @@ import { useState } from "react";
 import { useColorModeValue } from "../ui/color-mode";
 import { motion } from "framer-motion";
 import Constants from "../../core/const";
+import contactmeContent from "../../translations/contactme.json";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 const MotionButton = motion(Button);
 
 function ContactMe() {
+  const { language } = useLanguage();
+  const content = contactmeContent[language];
   const [isOpen, setIsOpen] = useState(false);
 
   const onOpen = () => setIsOpen(true);
@@ -44,7 +48,7 @@ function ContactMe() {
         color={bookmarkColor}
         _hover={{ bg: bookmarkHoverBg }}
         boxShadow={bookmarkShadow}
-        size="md"
+        size="lg"
         height="50px"
         px={3}
         borderRadius="md"
@@ -54,10 +58,10 @@ function ContactMe() {
         justifyContent="center"
         fontWeight="bold"
         fontSize="lg"
-        whileHover={{ width: "160px" }}
+        whileHover={{ width: "180px" }}
         transition={{ width: { duration: 0.2, ease: "easeOut" } }}
       >
-        Contact Me
+        {content.contactme}
       </MotionButton>
 
       {isOpen && (
@@ -87,7 +91,7 @@ function ContactMe() {
             {/* Modal Header */}
             <HStack justifyContent="space-between" alignItems="center" mb={4}>
               <Text fontSize="xl" fontWeight="bold" color={modalHeaderColor}>
-                Contact Me
+                {content.contactme}
               </Text>
               <Icon
                 as={MdClose}
@@ -102,7 +106,7 @@ function ContactMe() {
             {/* Modal Body */}
             <VStack gap={4} align="center">
               <Text fontSize="lg" color={modalBodyColor} textAlign="center">
-                You can reach me via email:
+                {content.reachme}
               </Text>
               <HStack>
                 <Icon as={MdEmail} color={emailColor} boxSize={5} />
